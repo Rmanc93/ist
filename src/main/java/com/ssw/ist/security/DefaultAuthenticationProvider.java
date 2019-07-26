@@ -53,9 +53,7 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
 		if (userName.isEmpty() || userPassword.toString().isEmpty()) {
 			return null;
 		}
-//		List<User> usr = userRepo.findByUsername(userName);
-		System.err.println(">>>>>>1 "+userPassword);
-		Employee user =userService.findByName(userName);
+		Employee user =userService.findByUsername(userName);
 
 
 		if (passwordEncoder.matches(userPassword, user.getPassword())) {
@@ -70,7 +68,6 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
 		List<SimpleGrantedAuthority> grantedAuths= new ArrayList();
 		
 		for(Role role:roles) {
-			System.err.println(role.getName());
 			grantedAuths.add(new SimpleGrantedAuthority(role.getName()));
 		}
 		

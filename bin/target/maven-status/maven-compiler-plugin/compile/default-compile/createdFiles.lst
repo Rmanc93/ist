@@ -1,0 +1,12 @@
+com\ssw\ist\controller\TestController.class
+com\ssw\ist\model\Task.class
+com\ssw\ist\model\Employee.class
+com\ssw\ist\security\DefaultAuthenticationProvider.class
+com\ssw\ist\security\SecurityConfig.class
+com\ssw\ist\enums\InOut.class
+com\ssw\ist\model\StampCatalog.class
+com\ssw\ist\IstApplication.class
+com\ssw\ist\model\Stamp.class
+com\ssw\ist\security\AuthorizationServerConfig.class
+com\ssw\ist\model\TaskCatalog.class
+com\ssw\ist\security\ResourceServerConfig.class

@@ -12,7 +12,7 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepo;
 	
-	public Employee findByName(String name) {
+	public Employee findByUsername(String name) {
 		
 		Employee user =userRepo.getOneByUsername(name).get(0);
 		return user;

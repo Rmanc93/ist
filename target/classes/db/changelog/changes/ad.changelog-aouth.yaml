@@ -8,34 +8,34 @@ databaseChangeLog:
             columns:
             - column:
                   name: authentication_id
-                  type: varchar(256)
+                  type: varchar(255)
                   constraints:
                       primaryKey: true
                       nullable: false
             - column:
                   name: token_id
-                  type: varchar(256)
+                  type: varchar(255)
             - column:
                   name: token
                   type: blob
             - column:
                   name: user_name
-                  type: varchar(256)
+                  type: varchar(255)
             - column:
                   name: client_id
-                  type: varchar(256)
+                  type: varchar(255)
             - column:
                   name: authentication
                   type: blob
             - column:
                   name: refresh_token
-                  type: varchar(256)
+                  type: varchar(255)
       - createTable:
             tableName: oauth_refresh_token
             columns:
             - column:
                   name: token_id
-                  type: varchar(256)
+                  type: varchar(255)
             - column:
                   name: token
                   type: blob
