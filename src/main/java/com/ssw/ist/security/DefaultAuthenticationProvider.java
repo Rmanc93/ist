@@ -58,18 +58,18 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
 
 		if (passwordEncoder.matches(userPassword, user.getPassword())) {
 		
-			return new UsernamePasswordAuthenticationToken(userName, userPassword, getAuthority(user.getRoles()));
+			return new UsernamePasswordAuthenticationToken(userName, userPassword, getAuthority(user.getRole()));
 		}
 
 		throw new UsernameNotFoundException("Invalid username or password.");
 	}
 
-	private List<SimpleGrantedAuthority> getAuthority(List<Role> roles) {
+	private List<SimpleGrantedAuthority> getAuthority(Role role) {
 		List<SimpleGrantedAuthority> grantedAuths= new ArrayList();
 		
-		for(Role role:roles) {
+		
 			grantedAuths.add(new SimpleGrantedAuthority(role.getName()));
-		}
+		
 		
 		return grantedAuths;
 	}

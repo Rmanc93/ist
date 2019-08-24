@@ -13,47 +13,54 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.lang.Nullable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 @Entity
 @Table(name = "tbl_employee")
 public class Employee {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	@Column(name = "sur_name", nullable = false,length = 200)
+
+	@Column(name = "sur_name", nullable = false, length = 200)
 	private String sName;
-	
-	@Column(name="name", length=200)
+
+	@Column(name = "name", length = 200)
 	private String name;
-	
-	@Column(name="actvt_strt_date", nullable= false)
+
+	@Column(name = "actvt_strt_date", nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date actStarDate;
-	
-	@Column(name="actvt_end_date")
+	private Date actStarDate = new Date();
+
+	@Column(name = "actvt_end_date")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date actEndDate = null;
-	
+	private Date actEndDate;
+
 	@Column(name = "username", nullable = false, unique = true, length = 200)
 	private String username;
 
-	@Column(name = "password", nullable = false , length = 200)
-	@JsonIgnore
+	@Column(name = "password", nullable = false, length = 200)
 	private String password;
 
-	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
-	@JoinTable(name = "user_roles", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "role_id") })
-	private List<Role> roles;
+
+	@OneToOne(fetch = FetchType.EAGER)
+	private Role role;
+
+	@OneToOne(fetch = FetchType.EAGER)
+	private Task task;
 
 	public Integer getId() {
 		return id;
@@ -63,7 +70,6 @@ public class Employee {
 		this.id = id;
 	}
 
-
 	public String getUsername() {
 		return username;
 	}
@@ -72,23 +78,26 @@ public class Employee {
 		this.username = username;
 	}
 
+	@JsonIgnore
 	public String getPassword() {
 		return password;
 	}
 
+	@JsonSetter
 	public void setPassword(String password) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		this.password = passwordEncoder.encode(password);
 	}
 
-	public List<Role> getRoles() {
-		return roles;
+
+
+	public Role getRole() {
+		return role;
 	}
 
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
+	public void setRole(Role role) {
+		this.role = role;
 	}
-
 
 	public String getsName() {
 		return sName;
@@ -122,5 +131,12 @@ public class Employee {
 		this.actEndDate = actEndDate;
 	}
 
-	
+	public Task getTask() {
+		return task;
+	}
+
+	public void setTask(Task task) {
+		this.task = task;
+	}
+
 }

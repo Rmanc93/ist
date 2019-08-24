@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.ssw.ist.enums.InOut;
+
 
 @Entity
 @Table(name = "tbl_stamp_catalog")
@@ -23,7 +23,7 @@ public class StampCatalog {
 	private String type;
 
 	@Column(name = "sign_stamp", nullable = false)
-	private InOut singType;
+	private String singType;
 
 	public Integer getId() {
 		return id;
@@ -49,11 +49,11 @@ public class StampCatalog {
 		this.type = type;
 	}
 
-	public InOut getSingType() {
+	public String getSingType() {
 		return singType;
 	}
 
-	public void setSingType(InOut singType) {
+	public void setSingType(String singType) {
 		this.singType = singType;
 	}
 	

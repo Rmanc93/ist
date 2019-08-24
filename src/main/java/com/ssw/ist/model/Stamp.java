@@ -14,40 +14,44 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="tbl_stamp")
+@Table(name = "tbl_stamp")
 public class Stamp {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	
+
 	@OneToOne(fetch = FetchType.EAGER)
 	private Employee employee;
-	
-	
+
 	@OneToOne(fetch = FetchType.EAGER)
 	private StampCatalog stampCatalog;
-	
-	@Column(name="mobile_datetime", nullable=false)
+
+	@Column(name = "mobile_datetime", nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date moblieDatetime;
-	
+
 	@Column(name = "Server_datetime")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date serverDate = new Date();
-	
 
 	@OneToOne(fetch = FetchType.EAGER)
-	private Employee SuperEmp;
-	
-	@Column(name = "start_date", nullable= false)
+	private Employee superEmp;
+
+	@Column(name = "start_date", nullable = true)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date startDate;
-	
-	@Column(name = "end_date", nullable= false)
+	private Date startDate = new Date();
+
+	@Column(name = "end_date", nullable = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date endDate;
+
+	@Column(length = 1)
+	private int status = 0;
+
+	@Column(name = "status_date")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date statusDate;
 
 	public Integer getId() {
 		return id;
@@ -84,17 +88,18 @@ public class Stamp {
 	public Date getServerDate() {
 		return serverDate;
 	}
+	
 
 	public void setServerDate(Date serverDate) {
 		this.serverDate = serverDate;
 	}
 
 	public Employee getSuperEmp() {
-		return SuperEmp;
+		return superEmp;
 	}
 
 	public void setSuperEmp(Employee superEmp) {
-		SuperEmp = superEmp;
+		this.superEmp = superEmp;
 	}
 
 	public Date getStartDate() {
@@ -112,6 +117,22 @@ public class Stamp {
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public Date getStatusDate() {
+		return statusDate;
+	}
+
+	public void setStatusDate(Date statusDate) {
+		this.statusDate = statusDate;
+	}
 	
-	
+
 }
