@@ -41,7 +41,7 @@ public class Employee {
 	@Column(name = "name", length = 200)
 	private String name;
 
-	@Column(name = "actvt_strt_date", nullable = false)
+	@Column(name = "actvt_strt_date")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date actStarDate = new Date();
 
@@ -60,7 +60,7 @@ public class Employee {
 	private Role role;
 
 	@OneToOne(fetch = FetchType.EAGER)
-	private Task task;
+	private TaskCatalog task;
 
 	public Integer getId() {
 		return id;
@@ -131,11 +131,11 @@ public class Employee {
 		this.actEndDate = actEndDate;
 	}
 
-	public Task getTask() {
+	public TaskCatalog getTask() {
 		return task;
 	}
 
-	public void setTask(Task task) {
+	public void setTask(TaskCatalog task) {
 		this.task = task;
 	}
 
