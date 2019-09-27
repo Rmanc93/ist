@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import com.ssw.ist.model.Employee;
 import com.ssw.ist.model.Role;
@@ -15,8 +17,13 @@ import com.ssw.ist.repository.RoleRepository;
 import com.ssw.ist.repository.UserRepository;
 
 @SpringBootApplication
-public class IstApplication {
+public class IstApplication  extends SpringBootServletInitializer{
 	
+	 @Override
+	    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	        return application.sources(IstApplication.class);
+	    }
+	 
 	@Autowired
 	private RoleRepository roleRepo;
 	@Autowired

@@ -1,22 +1,22 @@
-D:\ist project\ist\src\main\java\com\ssw\ist\model\Stamp.java
-D:\ist project\ist\src\main\java\com\ssw\ist\service\RoleService.java
-D:\ist project\ist\src\main\java\com\ssw\ist\repository\TaskRepository.java
-D:\ist project\ist\src\main\java\com\ssw\ist\controller\UserController.java
-D:\ist project\ist\src\main\java\com\ssw\ist\repository\RoleRepository.java
-D:\ist project\ist\src\main\java\com\ssw\ist\security\SimpleCORSFilter.java
-D:\ist project\ist\src\main\java\com\ssw\ist\model\StampCatalog.java
-D:\ist project\ist\src\main\java\com\ssw\ist\controller\TestController.java
-D:\ist project\ist\src\main\java\com\ssw\ist\model\Employee.java
-D:\ist project\ist\src\main\java\com\ssw\ist\security\AuthorizationServerConfig.java
-D:\ist project\ist\src\main\java\com\ssw\ist\model\TaskCatalog.java
-D:\ist project\ist\src\main\java\com\ssw\ist\repository\StampRepository.java
-D:\ist project\ist\src\main\java\com\ssw\ist\model\Role.java
-D:\ist project\ist\src\main\java\com\ssw\ist\IstApplication.java
-D:\ist project\ist\src\main\java\com\ssw\ist\security\DefaultAuthenticationProvider.java
-D:\ist project\ist\src\main\java\com\ssw\ist\security\ResourceServerConfig.java
-D:\ist project\ist\src\main\java\com\ssw\ist\security\SecurityConfig.java
-D:\ist project\ist\src\main\java\com\ssw\ist\repository\StampCatalogRepository.java
-D:\ist project\ist\src\main\java\com\ssw\ist\service\UserService.java
-D:\ist project\ist\src\main\java\com\ssw\ist\repository\UserRepository.java
-D:\ist project\ist\src\main\java\com\ssw\ist\controller\StampCntroller.java
-D:\ist project\ist\src\main\java\com\ssw\ist\service\StampService.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\service\StampService.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\security\AuthorizationServerConfig.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\service\RoleService.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\model\TaskCatalog.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\controller\StampCntroller.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\controller\TestController.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\repository\UserRepository.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\security\ResourceServerConfig.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\repository\StampRepository.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\model\Stamp.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\IstApplication.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\security\SimpleCORSFilter.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\model\StampCatalog.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\security\SecurityConfig.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\controller\UserController.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\repository\RoleRepository.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\model\Employee.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\repository\TaskRepository.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\service\UserService.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\model\Role.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\repository\StampCatalogRepository.java
+F:\Allianz-Projects\GIT\ist\src\main\java\com\ssw\ist\security\DefaultAuthenticationProvider.java
